@@ -1,0 +1,40 @@
+{
+  "kafka": {
+    "bootstrap.servers": "your-kafka-broker:9092",
+    "security.protocol": "SASL_SSL",
+    "sasl.mechanism": "PLAIN",
+    "sasl.username": "your_username  // create under 'Credentials' in WarpStream cluster",
+    "sasl.password": "your-password // create under 'Credentials' in WarpStream cluster",
+    "ssl.ca.location": "/path/to/your/tls.crt",
+    "topic.metadata.refresh.interval.ms": "60000",
+    "fetch.max.bytes": "4194304",
+    "max.partition.fetch.bytes": "1048576",
+    "queue.buffering.max.kbytes": "1048576",
+    "queue.buffering.max.messages": "1000000",
+    "message.max.bytes": "4194304",
+    "batch.size": "4194304",
+    "batch.num.messages": "100000",
+    "linger.ms": "100",
+    "sticky.partitioning.linger.ms": "25",
+    "topic": "customer-data-topic"
+  },
+  "kafka_consumer": {
+    "bootstrap.servers": "your-kafka-broker:9092",
+    "security.protocol": "SASL_SSL",
+    "sasl.mechanism": "PLAIN",
+    "sasl.username": "your_username  // create under 'Credentials' in WarpStream cluster",
+    "sasl.password": "your-password // create under 'Credentials' in WarpStream cluster",
+    "ssl.ca.location": "/path/to/your/tls.crt",
+    "group.id": "my-consumer-group",
+    "auto.offset.reset": "earliest",
+    "enable.auto.commit": "false"
+  },
+  "schema_registry": {
+    "url": "https://your-schema-registry-url",
+    "api_key": "YOUR_SCHEMA_REGISTRY_KEY",
+    "api_secret": "YOUR_SCHEMA_REGISTRY_SECRET",
+    "schema_path": "schemas/customer.avsc"
+  },
+  "faker_locale": "en_IN",
+  "default_acquisition_channel": "web"
+}

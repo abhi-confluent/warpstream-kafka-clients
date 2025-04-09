@@ -1,0 +1,43 @@
+{
+  "type": "record",
+  "name": "Customer",
+  "namespace": "com.example",
+  "doc": "Schema for customer data with basic information",
+  "fields": [
+    {
+      "name": "customer_id",
+      "type": "string",
+      "doc": "Unique identifier for the customer (UUID)"
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "doc": "Customer email address"
+    },
+    {
+      "name": "first_name",
+      "type": "string",
+      "doc": "Customer first name"
+    },
+    {
+      "name": "last_name",
+      "type": "string",
+      "doc": "Customer last name"
+    },
+    {
+      "name": "phone_number",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Customer phone number"
+    },
+    {
+      "name": "created_at",
+      "type": "string",
+      "doc": "Timestamp when the customer record was created (ISO 8601 format)"
+    },
+    {
+      "name": "acquisition_channel",
+      "type": "string"
+    }
+  ]
+}
